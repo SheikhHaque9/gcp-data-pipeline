@@ -9,7 +9,7 @@ Architecture
 Bike availability and station data is fetched from the Transport for London (TfL) BikePoint API.
 2. Data Ingestion
 
-• A Cloud Scheduler job triggers every 30 minutes (CRON: */30 * * * *). • This scheduler publishes a message to a Pub/Sub topic (bike_ingestion). • A Cloud Function (ingest_bike_data) is triggered by this topic and fetches data from the API.
+• A Cloud Scheduler job triggers every hour (CRON: 0 * * * *). • This scheduler publishes a message to a Pub/Sub topic (bike_ingestion). • A Cloud Function (ingest_bike_data) is triggered by this topic and fetches data from the API.
 3. Data Processing
 
 The Cloud Function processes the JSON data, extracts relevant fields, and prepares it for storage.
