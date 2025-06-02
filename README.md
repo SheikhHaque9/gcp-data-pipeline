@@ -179,12 +179,6 @@ CREATE TABLE bike_stations (
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🆘 Troubleshooting
-
 ### Common Issues
 
 **API Rate Limiting**
@@ -195,12 +189,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Database Connection Issues**
 - Ensure Cloud SQL instance is running and accessible from Cloud Function.
-
-### Getting Help
-
-- 📖 Check the [Wiki](wiki-link) for detailed guides
-- 🐛 Report bugs via [Issues](issues-link)
-- 💬 Join discussions in [Discussions](discussions-link)
 
 ## 🙏 Acknowledgments
 
