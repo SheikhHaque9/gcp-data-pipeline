@@ -2,8 +2,6 @@
 import streamlit as st
 import requests
 import pandas as pd
-import os
-from pathlib import Path
 
 st.title("🚲 TfL BikePoint Live Dashboard")
 
@@ -68,37 +66,7 @@ st.write(
 # Architecture
 st.header("Architecture")
 
-#st.image("diagram.png", caption="Architecture Diagram")
-
-
-st.write("🔍 **Streamlit Cloud Debug:**")
-st.write("Current working directory:", os.getcwd())
-st.write("Python file location:", __file__)
-
-# Check current directory contents
-st.write("Files in current directory:")
-for item in sorted(os.listdir(".")):
-    if os.path.isfile(item):
-        size = os.path.getsize(item)
-        st.write(f"📄 {item} ({size} bytes)")
-    else:
-        st.write(f"📁 {item}/")
-
-# Specifically check for the image
-image_path = Path("Diagram.png")
-if image_path.exists():
-    st.success("✅ Diagram.png found!")
-    st.write(f"File size: {image_path.stat().st_size} bytes")
-    st.write(f"Absolute path: {image_path.absolute()}")
-else:
-    st.error("❌ Diagram.png not found in current directory")
-    
-    # Check if it exists elsewhere
-    for root, dirs, files in os.walk("."):
-        for file in files:
-            if file == "Diagram.png":
-                found_path = os.path.join(root, file)
-                st.write(f"🔍 Found Diagram.png at: {found_path}")
+st.image("streamlit_app/Diagram.png", caption="Architecture Diagram")
 
 st.subheader("1. Data Source")
 st.write("Bike availability and station data is fetched from the Transport for London (TfL) BikePoint API.")
