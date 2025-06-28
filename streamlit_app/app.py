@@ -66,7 +66,7 @@ st.write(
 # Architecture
 st.header("Architecture")
 
-st.image("Diagram.png", caption="Architecture Diagram")
+st.image("/streamlit_app/Diagram.png", caption="Architecture Diagram")
 
 st.subheader("1. Data Source")
 st.write("Bike availability and station data is fetched from the Transport for London (TfL) BikePoint API.")
