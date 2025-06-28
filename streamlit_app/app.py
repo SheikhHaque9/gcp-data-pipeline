@@ -73,7 +73,7 @@ st.write("Bike availability and station data is fetched from the Transport for L
 
 st.subheader("2. Data Ingestion")
 st.write(
-    "• A Cloud Scheduler job triggers every hour (CRON: */60 * * * *).\n"
+    "• A Cloud Scheduler job triggers every hour (CRON: 0 * * * *).\n"
     "• This scheduler publishes a message to a Pub/Sub topic (bike_ingestion).\n"
     "• A Cloud Function (ingest_bike_data) is triggered by this topic and fetches data from the API."
 )

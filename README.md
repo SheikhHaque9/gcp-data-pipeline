@@ -7,7 +7,7 @@ A real-time data pipeline built on Google Cloud Platform to collect, process, an
 
 ## 🏗️ Architecture Overview
 
-![Architecture Diagram](/streamlit_app/diagram.png?raw=true "Architecture Diagram")
+![Architecture Diagram](/streamlit_app/Diagram.png?raw=true "Architecture Diagram")
 
 This data pipeline follows a serverless, event-driven architecture that ensures reliable and scalable data collection:
 1. 🕐 Automated Scheduling Cloud Scheduler acts as the pipeline trigger, executing every hour using a CRON expression (0 * * * *). This ensures consistent data collection throughout the day without manual intervention.
