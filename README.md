@@ -7,12 +7,14 @@ A real-time data pipeline built on Google Cloud Platform to collect, process, an
 
 ## 🏗️ Architecture Overview
 
+![Architecture Diagram](/gcp-data-pipeline/streamlit_app/Diagram.png?raw=true "Architecture Diagram")
+
 This data pipeline follows a serverless, event-driven architecture that ensures reliable and scalable data collection:
 1. 🕐 Automated Scheduling Cloud Scheduler acts as the pipeline trigger, executing every hour using a CRON expression (0 * * * *). This ensures consistent data collection throughout the day without manual intervention.
 2. 📨 Event-Driven Messaging When triggered, the scheduler publishes a message to a Pub/Sub topic called bike_ingestion. This decouples the scheduling from data processing, providing reliability and fault tolerance.
 3. ⚡ Serverless Processing The Pub/Sub message triggers a Cloud Function named ingest_bike_data, which automatically scales based on demand. This function handles the core data processing logic without requiring server management.
 4. 🌐 External Data Retrieval The Cloud Function makes HTTP requests to the TfL BikePoint API to fetch real-time bike availability data across all London stations. The API returns JSON data containing station details, bike counts, and dock availability.
-5. 💾 Data Persistence Processed and cleaned data is inserted into a Cloud SQL MySQL database. Each record includes station information, availability metrics, and timestamps for historical tracking.
+5. 💾 Data Persistence Processed and cleaned data is inserted into a Cloud SQL (PostgreSQL) database. Each record includes station information, availability metrics, and timestamps for historical tracking.
 6. 📊 Data Visualization A Streamlit web application, hosted on Compute Engine, connects to the Cloud SQL database to query historical and current data, presenting it through interactive dashboards and visualizations.
 This architecture ensures high availability, automatic scaling, and cost-effectiveness by leveraging Google Cloud's managed services and serverless computing model.
 
@@ -30,7 +32,7 @@ This architecture ensures high availability, automatic scaling, and cost-effecti
 - **Cloud Scheduler** - Automated job triggering
 - **Pub/Sub** - Event-driven messaging
 - **Cloud Functions** - Serverless data processing
-- **Cloud SQL (MySQL)** - Managed database storage
+- **Cloud SQL (PostgreSQL)** - Managed database storage
 - **Compute Engine** - Application hosting
 
 ### External Services & Tools
