@@ -94,8 +94,7 @@ st.subheader("5. Data Visualization")
 st.write(
     "• This Streamlit web app queries the Cloud SQL database, loads the data into pandas DataFrames, and presents visual summaries such as:\n"
     "  - Total available bikes and docks\n"
-    "  - Station-level details\n"
-    "  - Time-based trends"
+    "  - Station-level details"
 )
 
 # Tech Stack
