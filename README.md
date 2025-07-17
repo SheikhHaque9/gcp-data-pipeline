@@ -200,14 +200,12 @@ CREATE TABLE bike_stations (
 - Google Cloud Platform for the robust infrastructure
 - Streamlit team for the excellent visualization framework
 
----
-
 ## 📱 Follow Me
 
 - If you want to see more from me, please follow me on:
 
-**LinkedIn**: https://www.linkedin.com/feed/
-**Github**: https://github.com/SheikhHaque9
-
+- **LinkedIn**: https://www.linkedin.com/feed/
+- **Github**: https://github.com/SheikhHaque9
+---
 
 ⭐ **Star this repo if you found it useful!** ⭐
